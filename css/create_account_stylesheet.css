@@ -84,6 +84,7 @@ header a:link, header a:visited {
     background-color: rgb(186, 12, 47);
     display: inline-block;
     padding: 10px 35px;
+    width: 120px;
     position: relative;
     margin: 0;
 }
