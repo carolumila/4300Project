@@ -84,7 +84,7 @@ header a:link, header a:visited {
     background-color: rgb(186, 12, 47);
     display: inline-block;
     padding: 10px 35px;
-    width: 130px;
+    width: 120px;
     position: relative;
     margin: 0;
 }
@@ -103,7 +103,7 @@ header a:link, header a:visited {
 #nav_list ul ul{
     display: none;
     position: absolute;
-    margin-left: -15px;
+    margin-left: -25px;
     margin-top: 5px;
     padding: 0;
     text-align: center;
@@ -125,9 +125,9 @@ header a:link, header a:visited {
 /* MAIN CSS */
 main {
     clear: left;
-    text-align: center;
     padding-top: 1em;
     min-height: 550px;
+    padding: 2em;
 }
 aside {
     float:left;
@@ -151,6 +151,22 @@ aside {
     color: black;
 }
 
+/* CREATE ACCOUNT FORM */
+#createAccountForm label {
+    margin: 5px;
+    float: left;
+    text-align: left;
+    width: 9em;
+}
+#createAccountForm input {
+    margin: 5px;
+    width: 12em;
+}
+#createAccountForm fieldset {
+    width: 50%;
+    padding: 10px;
+}
+
 /* FOOTER CSS */
 footer {
     clear: both;
@@ -163,5 +179,3 @@ footer {
     margin: 0;
     padding: 3px;
 }
-
-
