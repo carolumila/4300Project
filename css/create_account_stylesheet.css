@@ -86,11 +86,13 @@ header a:link, header a:visited {
     padding: 10px 35px;
     width: 120px;
     position: relative;
-    margin: 0;
 }
 #nav_list ul li a {
     color: black;
     text-decoration: none;
+    display:block;
+    text-align: center;
+    padding: 10px 10px;
 }
 #nav_list ul li .current {
     color: white;
@@ -115,7 +117,6 @@ header a:link, header a:visited {
     text-align: center;
     padding-top: 10px;
     margin: 0;
-    margin-left: -20px;
     width: 175px;
 }
 #nav_list ul li:hover > ul {
