@@ -1,6 +1,6 @@
 <?php
 
-    $source='mysql:host=localhost; dbname=dawgdatabase';
+    $source='mysql:host=localhost; dbname=ugastore';
     $username='root';
     $password='';
     try{ $db= new PDO($source, $username, $password);}
