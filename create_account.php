@@ -42,7 +42,7 @@
 
         <main>
             <h2><b>Create Account</b></h2>
-            <form id="createAccountForm">
+            <form id="createAccountForm" action="newAccount.php" method="POST">
                 <fieldset id="personalInfo">
                     <legend><b>Personal Information</b></legend>
                     
@@ -64,13 +64,13 @@
                     <label for="zipCode">Zip Code:</label>
                     <input type="text" name="zipCode" placeholder="30606"><br>
 
-                    <label for="phoneNumber">Phone Number:</label>
-                    <input type="text" name="phoneNumber" placeholder="555-555-5555"><br>
-
                 </fieldset> <br>
 
                 <fieldset id="accountInfo">
                     <legend><b>Account Information</b></legend>
+
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" placeholder="hairydawg123"><br>
 
                     <label for="email">Email Address:</label>
                     <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
