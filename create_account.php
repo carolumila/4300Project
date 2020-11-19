@@ -9,7 +9,7 @@
     <body>
         <header>
             <a href="index.php"><img id="imageheader" src="images/UGA_logo.png" height="95" alt="logo"></a>
-            <h1 id="title">UGA Marketplace!</h1>
+            <h1 id="title">UGA Merch!</h1>
             <form id="searchBarForm" method="get" >
                 <input type="text" id="searchBar" placeholder="Search">
                 <button type="submit" id="searchButton"><img src="images/magnifying_glass.png" height="15" width="15"></button>
