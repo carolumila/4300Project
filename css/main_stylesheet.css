@@ -150,6 +150,10 @@ aside {
     text-decoration: none;
     color: black;
 }
+#loginError {
+    font: smaller bold;
+    color: red;
+}
 
 /* FOOTER CSS */
 footer {

@@ -1,8 +1,11 @@
-<?php
+<?php 
     include('signInHeader.php');
+
 ?>
 
+<html>
     <body>
+
         <main>
             <form id="signInForm" action="validateSignIn.php" method="post">
                 <fieldset>
@@ -11,6 +14,7 @@
                     <input type="text" name="user" placeholder="Username" required><br>
                     <label>Password:</label><br>
                     <input type="password" name="password" placeholder="Password" required><br>
+                    <span id="loginError">Incorrect username or password! Please try again.</span><br>
                     <input type="submit" value="Sign In">
                     <input type="reset" value="Clear">
                 </fieldset>
