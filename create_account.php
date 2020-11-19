@@ -76,10 +76,10 @@
                     <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
 
                     <label for="password">Create Password:</label>
-                    <input type="text" name="password" placeholder="password"><br>
+                    <input type="password" name="password" placeholder="password"><br>
 
                     <label for="password2">Confirm Password:</label>
-                    <input type="text" name="password2" placeholder="password"><br>
+                    <input type="password" name="password2" placeholder="password"><br>
                 </fieldset><br>
 
                 <button type="submit" id="createAccountButton">Create Account</button>
