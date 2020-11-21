@@ -21,9 +21,7 @@
                     WHERE user_id='$userID'";
         $statement1 = $db->prepare($query1);
         $statement1->execute();
-        $profile = $statement1->fetch();
-
-        
+        $profile = $statement1->fetch();        
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +76,9 @@
         </nav>
 
         <main>
+            
             <h2><b>Your Profile</b></h2>
+            <p class="error">An error occurred. Please try again.</p>
             <form id="updateInfoForm" action="updateAccount.php" method="POST">
                 <fieldset id="personalInfo">
                     <legend><b>Personal Information</b></legend>

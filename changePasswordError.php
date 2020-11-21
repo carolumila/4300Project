@@ -23,6 +23,8 @@
         $statement1->execute();
         $profile = $statement1->fetch();
 
+        $error = 'Incorrect old password. Password not updated.';
+
         
 ?>
 
@@ -78,7 +80,9 @@
         </nav>
 
         <main>
+            
             <h2><b>Your Profile</b></h2>
+            <p class="error">Error! <?php echo $error; ?> <br>Please try again.</p>
             <form id="updateInfoForm" action="updateAccount.php" method="POST">
                 <fieldset id="personalInfo">
                     <legend><b>Personal Information</b></legend>

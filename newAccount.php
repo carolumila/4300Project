@@ -17,6 +17,9 @@
     $query1="INSERT INTO profile (user_id, streetAddr, city, state, zip) VALUES ('$user_id', '$address', '$city', '$state', '$zip')";
     $db->exec($query1);
     
-    
-    include('index.php');
+    session_start();
+    $_SESSION['username'] = $user;
+    $_SESSION['password'] = $password;
+    $_SESSION['flag'] = 1;
+    header("Location:index.php");
 ?>
