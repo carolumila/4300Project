@@ -1,9 +1,24 @@
+<?php
+    include('database.php');
+
+    session_start();
+
+    if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) {
+        header("Location: sign_in.php");
+    }
+    else {
+        $user = $_SESSION['username'];
+        $password = $_SESSION['password'];
+
+        $query = "SELECT"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>UGA Merch!</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/edit_profile.css">
     </head>
 
     <body>
@@ -16,7 +31,17 @@
             </form>
                     
             <p class="headerLinks" id="shoppingCart"><a href="shopping_cart.php" >Shopping Cart</a></p>
+            <?php 
+                session_start();
+                if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
             <p class="headerLinks" id="signIn"><a href="sign_in.php" >Sign In</a></p>
+            <?php
+                }
+                else { ?>
+            <p class="headerLinks" id="signIn"><a href="edit_profile.php" >Edit Profile</a></p>
+            <?php
+                }
+            ?>
         </header>
         <nav id="nav_list">
                 <ul>
@@ -41,7 +66,55 @@
         </nav>
 
         <main>
-            <p>Edit profile is currently under construction.</p>
+            <h2><b>Edit Profile</b></h2>
+            <form id="updatePersonalInfoForm" action="updateAccount.php" method="POST">
+                <fieldset id="personalInfo">
+                    <legend><b>Update Personal Information</b></legend>
+                    
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" placeholder="First Name"><br>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" placeholder="Last Name"><br><br>
+
+                    <label for="streetAddress">Street Address:</label>
+                    <input type="text" name="streetAddress" placeholder="123 Dawg St."><br>
+
+                    <label for="city">City:</label>
+                    <input type="text" name="city" placeholder="Athens"><br>
+
+                    <label for="state">State:</label>
+                    <input type="text" name="state" placeholder="Georgia"><br>
+
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" name="zipCode" placeholder="30606"><br>
+
+                </fieldset> <br>
+
+                <button type="submit" id="createAccountButton">Update Personal Information</button>
+            </form><br>
+
+            <form id="updateAccountInfoForm" action="updateAccount.php" method="POST">
+                <fieldset id="accountInfo">
+                    <legend><b>Update Account Information</b></legend>
+
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" placeholder="hairydawg123"><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
+
+                    <label for="password">Create Password:</label>
+                    <input type="password" name="password" placeholder="password"><br>
+
+                    <label for="password2">Confirm Password:</label>
+                    <input type="password" name="password2" placeholder="password"><br>
+                </fieldset><br>
+
+                <button type="submit" id="createAccountButton">Update Account</button>
+
+                
+            </form>
         </main>
 
         <footer>
@@ -49,3 +122,7 @@
         </footer>
     </body>
 </html>
+
+<?php
+    }
+?>
