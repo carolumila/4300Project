@@ -22,7 +22,7 @@
             <?php
                 }
                 else { ?>
-            <p class="headerLinks" id="signIn"><a href="edit_profile.php" >Edit Profile</a></p>
+            <p class="headerLinks" id="signIn"><a href="logout.php" >Logout</a></p>
             <?php
                 }
             ?>

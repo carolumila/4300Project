@@ -10,7 +10,7 @@
         $user = $_SESSION['username'];
         $password = $_SESSION['password'];
 
-        $query = "SELECT"
+        $query = "SELECT";
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +32,12 @@
                     
             <p class="headerLinks" id="shoppingCart"><a href="shopping_cart.php" >Shopping Cart</a></p>
             <?php 
-                session_start();
                 if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
             <p class="headerLinks" id="signIn"><a href="sign_in.php" >Sign In</a></p>
             <?php
                 }
                 else { ?>
-            <p class="headerLinks" id="signIn"><a href="edit_profile.php" >Edit Profile</a></p>
+            <p class="headerLinks" id="signIn"><a href="logout.php" >Logout</a></p>
             <?php
                 }
             ?>

@@ -16,7 +16,17 @@
                 </form>
                         
                 <p class="headerLinks" id="shoppingCart"><a href="shopping_cart.php" >Shopping Cart</a></p>
+                <?php 
+                    session_start();
+                    if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
                 <p class="headerLinks" id="signIn"><a href="sign_in.php" >Sign In</a></p>
+                <?php
+                    }
+                    else { ?>
+                <p class="headerLinks" id="signIn"><a href="logout.php" >Logout</a></p>
+                <?php
+                    }
+                ?>
             </header>
             <nav id="nav_list">
                     <ul>
@@ -40,6 +50,8 @@
                     </ul>
                 </nav>
 
+        <?php 
+            if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
         <main>
             <h2><b>Create Account</b></h2>
             <form id="createAccountForm" action="newAccount.php" method="POST">
@@ -87,6 +99,16 @@
                 
             </form>
         </main>
+        <?php
+            }
+            else { ?>
+        <main>
+            <h2 id= "logoutStatement"> Please logout to create a new account.</h2>
+            <p class="headerLinks" id="logoutButton"><a href="logout.php" >Logout Here</a></p>
+        </main>
+        <?php
+            }
+        ?>
 
         <footer>
             <p>&copy; 2020 UGA Marketplace</p>
