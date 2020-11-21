@@ -77,7 +77,7 @@
 
         <main>
             <h2><b>Your Profile</b></h2>
-            <p id = "success">Your profile has been successfully updated!</p>
+            <p id = "success">Your password has been successfully changed!</p>
             <form id="updateInfoForm" action="updateAccount.php" method="POST">
                 <fieldset id="personalInfo">
                     <legend><b>Personal Information</b></legend>
