@@ -15,6 +15,7 @@
                 <button type="submit" id="searchButton"><img src="images/magnifying_glass.png" height="15" width="15"></button>
             </form>
                     
+            <p class="headerLinks" id="shoppingCart"><a href="shopping_cart.php" >Shopping Cart</a></p>
             <?php 
                 session_start();
                 if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
