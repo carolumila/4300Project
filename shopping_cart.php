@@ -30,7 +30,7 @@
         </header>
         <nav id="nav_list">
                 <ul>
-                    <li><a href="index.php" class="current">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li class="noHighlight">Clothing
                         <ul>

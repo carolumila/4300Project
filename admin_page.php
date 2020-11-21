@@ -30,7 +30,7 @@
         </header>
         <nav id="nav_list">
                 <ul>
-                    <li><a href="index.php" class="current">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li class="noHighlight">Clothing
                         <ul>
@@ -44,7 +44,7 @@
                         <ul>
                             <a href="edit_profile.php"><li>Edit Profile</li></a>
                             <a href="create_account.php"><li>Create Account</li></a>
-                            <a href="admin_page.php"><li>Admin</li></a>
+                            <a href="admin_page.php" class="current"><li>Admin</li></a>
                         </ul>
                     </li>
                 </ul>

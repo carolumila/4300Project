@@ -30,7 +30,7 @@
             </header>
             <nav id="nav_list">
                     <ul>
-                        <li><a href="index.php" class="current">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about_us.php">About Us</a></li>
                         <li class="noHighlight">Clothing
                             <ul>
@@ -43,7 +43,7 @@
                         <li class="noHighlight">Account
                             <ul>
                                 <a href="edit_profile.php"><li>Edit Profile</li></a>
-                                <a href="create_account.php"><li>Create Account</li></a>
+                                <a href="create_account.php" class="current"><li>Create Account</li></a>
                                 <a href="admin_page.php"><li>Admin</li></a>
                             </ul>
                         </li>
@@ -102,9 +102,9 @@
         <?php
             }
             else { ?>
-        <main>
-            <h2 id= "logoutStatement"> Please logout to create a new account.</h2>
-            <p class="headerLinks" id="logoutButton"><a href="logout.php" >Logout Here</a></p>
+        <main id="needToLogout">
+                <h2 id= "logoutStatement"> Please logout to create a new account.</h2><br>
+                <p id="logoutButton"><a href="logout.php" >Logout Here</a></p>
         </main>
         <?php
             }
