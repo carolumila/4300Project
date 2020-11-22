@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+<script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("firstPassword").value;
+            var confirmPassword = document.getElementById("secondPassword").value;
+            if (password != confirmPassword) {
+                alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
     <head>
         <title>Create Account</title>
         <link rel="shortcut icon" href="favicon.ico">
@@ -88,13 +103,13 @@
                     <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
 
                     <label for="password">Create Password:</label>
-                    <input type="password" name="password" placeholder="password"><br>
+                    <input type="password" name="password" id="firstPassword" placeholder="password" onkeyup="checkPass();"><br>
 
                     <label for="password2">Confirm Password:</label>
-                    <input type="password" name="password2" placeholder="password"><br>
+                    <input type="password" name="password2" id="secondPassword" placeholder="password" onkeyup="checkPass();"><br>
                 </fieldset><br>
 
-                <button type="submit" id="createAccountButton">Create Account</button>
+                <button type="submit" id="createAccountButton" onclick="return Validate()">Create Account</button>
 
                 
             </form>
