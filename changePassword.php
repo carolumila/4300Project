@@ -5,7 +5,7 @@ include('database.php');
 
 // update password if user puts in the old & new password and old password is correct
 $oldPassword = $_POST['oldPassword'];
-$newPassword = $_POST['password'];
+$newPassword = $_POST['newPassword'];
 
 $userID = $_SESSION['userID'];
 
