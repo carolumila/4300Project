@@ -9,18 +9,12 @@
     }catch(Exception $e){
         echo $e->getMessage();
     }
-
-    // get the current cateogory
-    $statement = $db->prepare($query);
-    $statement->execute();
-    $category = $statement->fetch();
-    $category_name=$category['category'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo $category_name;?></title>
+    <title>Search Results</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/results_stylesheet.css">
 </head>
@@ -68,8 +62,8 @@
             </ul>
         </nav>
     
-        <main style= "text-align: center;">
-        <h1 id="categoryName"><?php echo $category_name;?></h1><br>
+        <main>
+        <h1 id="results">Search Results for: '<?php echo $search; ?>'</h1><br>
         <?php foreach($items as $item):?>
             <aside>
                 <img src="<?php echo $item['path']?>" alt="<?php echo $item['name']?>" height="200">

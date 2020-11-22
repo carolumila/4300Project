@@ -25,7 +25,7 @@
         <header>
                 <a href="index.php"><img id="imageheader" src="images/UGA_logo.png" height="95" alt="logo"></a>
                 <h1 id="title">UGA Marketplace!</h1>
-                <form id="searchBarForm" action="results.php" method="GET">
+                <form id="searchBarForm" action="searchResults.php" method="GET">
                     <input type="text" id="searchBar" name="search" placeholder="Search">
                     <button type="submit" id="searchButton"><img src="images/magnifying_glass.png" height="15" width="15"></button>
                 </form>
@@ -45,7 +45,7 @@
             </header>
             <nav id="nav_list">
                     <ul>
-                        <li><a href="index.php" class="current">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about_us.php">About Us</a></li>
                         <li class="noHighlight">Clothing
                             <ul>
@@ -58,7 +58,7 @@
                         <li class="noHighlight">Account
                             <ul>
                                 <a href="edit_profile.php"><li>Edit Profile</li></a>
-                                <a href="create_account.php"><li>Create Account</li></a>
+                                <a href="create_account.php" class="current"><li>Create Account</li></a>
                                 <a href="admin_page.php"><li>Admin</li></a>
                             </ul>
                         </li>
@@ -117,9 +117,9 @@
         <?php
             }
             else { ?>
-        <main>
-            <h2 id= "logoutStatement"> Please logout to create a new account.</h2>
-            <p class="headerLinks" id="logoutButton"><a href="logout.php" >Logout Here</a></p>
+        <main id="needToLogout">
+                <h2 id= "logoutStatement"> Please logout to create a new account.</h2><br>
+                <p id="logoutButton"><a href="logout.php" >Logout Here</a></p>
         </main>
         <?php
             }
