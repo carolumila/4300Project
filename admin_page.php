@@ -1,13 +1,11 @@
 <?php
     include('database.php');
-
-    
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>UGA Merch!</title>
+        <title>Admin</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="css/main_stylesheet.css">
     </head>
