@@ -10,14 +10,13 @@
     $state = $_POST['state'];
     $zip = $_POST['zipCode'];
     $email = $_POST['email'];
-    $user = $_POST['username'];
 
     $userID = $_SESSION['userID'];
 
     try {
         // update info in respective tables
         $query="UPDATE user
-                    SET firstName = '$first', lastName = '$last', username = '$user', email = '$email'
+                    SET firstName = '$first', lastName = '$last', email = '$email'
                     WHERE user_id='$userID'";
         $db->exec($query);
         $query1="UPDATE profile

@@ -4,6 +4,7 @@
         <title>UGA Merch!</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="css/edit_profile.css">
+    
     </head>
 
     <body>

@@ -3,7 +3,7 @@
 
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
         function Validate() {
             var password = document.getElementById("firstPassword").value;
             var confirmPassword = document.getElementById("secondPassword").value;
