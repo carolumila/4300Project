@@ -1,3 +1,9 @@
+<?php
+    include('database.php');
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -51,7 +57,39 @@
             </nav>
 
         <main>
-            <p>Admin page is currently under construction.</p>
+        <table border=1 class="center">
+                <tr>
+                    <th>user id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Type</th>
+                    <th>Status</th>
+                    <th>Promote/Demote</th>
+                    <th>Suspend/Unsuspend</th>
+                    <tr>
+                        {% for user in userDetails %}
+                        <td>{{user[0]}}</td>
+                        <td>{{user[1]}}</td>
+                        <td>{{user[2]}}</td>
+                        <td>{{user[3]}}</td>
+                        <td>{{user[4]}}</td>
+                        <td>
+                            <form action="/manageUsers" method="POST">
+                                <input type="hidden" name="userId" value={{user[0]}}>
+                                <input type="submit" value="Change Type">
+                                
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/changedStatus" method="POST">
+                                <input type="hidden" name="userId" value={{user[0]}}>
+                                <input type="submit" value="Change Status">
+                            </form>
+                        </td>
+                    </tr>
+                        {% endfor %}
+                </tr>
+            </table>
         </main>
 
         <footer>
