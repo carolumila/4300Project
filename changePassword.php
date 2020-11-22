@@ -1,7 +1,7 @@
 <?php
 
-include('database.php');
 session_start();
+include('database.php');
 
 // update password if user puts in the old & new password and old password is correct
 $oldPassword = $_POST['oldPassword'];
@@ -18,6 +18,7 @@ if($data->rowCount() > 0) {
                 SET password = '$newPassword'
                 WHERE user_id = '$userID'";
     $db->exec($query3);
+    $_SESSION['password'] = $newPassword;
     header("Location: change_password_success.php");
 } else {
     header("Location: changePasswordError.php");
