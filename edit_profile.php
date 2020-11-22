@@ -16,6 +16,7 @@
             <?php include('forms/updateInfoForm.php'); ?><br>
 
             <?php include('forms/changePasswordForm.php'); ?>
+        </main>
 
         <footer>
             <p>&copy; 2020 UGA Marketplace</p>
