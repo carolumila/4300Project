@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>UGA Merch!</title>
+        <title>Edit Profile</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="css/edit_profile.css">
     
