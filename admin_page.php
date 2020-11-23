@@ -3,7 +3,7 @@
     <head>
         <title>Admin</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/admin_page_stylesheet.css">
     </head>
 
     <body>
@@ -50,15 +50,27 @@
                 </ul>
             </nav>
 
-        <?php if(!isset($_SESSION['userType']) || $_SESSION['userType'] == 'admin') { ?>
-        <main>
-            <a href="manageusers.php"><img src="images/manageusers.png" alt="manageusers" height="150"><p><strong>Manage Users</strong></p></a><br><br><br>
-            <a href="addproduct.php"><img src="images/addproduct.png" alt="addproduct" height="150"><p><strong>Add Products</strong></p></a>
-        </main>
+        <?php if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
+
+            <main id="needToLogin">
+                <h2 id= "loginStatement">Please login to access administrative pages.</h2><br>
+                <p id="loginLink"><a href="sign_in.php" >Login Here</a></p>
+            </main>
+
         <?php } else { ?>
-        <main>
-            <p>You do not have administrative access.</p>
-        </main>
+
+
+            <?php if(!isset($_SESSION['userType']) || $_SESSION['userType'] == 'admin') { ?>
+            <main>
+                <a href="manageusers.php"><img src="images/manageusers.png" alt="manageusers" height="150"><p><strong>Manage Users</strong></p></a><br><br><br>
+                <a href="addproduct.php"><img src="images/addproduct.png" alt="addproduct" height="150"><p><strong>Add Products</strong></p></a>
+            </main>
+            <?php } else { ?>
+            <main>
+                <p>You do not have administrative access.</p>
+            </main>
+            <?php } ?>
+
         <?php } ?>
 
         <footer>
