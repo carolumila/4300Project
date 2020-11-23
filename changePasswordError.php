@@ -7,12 +7,15 @@
         header("Location: sign_in.php");
     }
     else {
+        $error = 'Incorrect old password. Password not updated.';
+
         include('edit_profile_header.php');
 ?>
 
-
-        <main>
+<main>
+            
             <h2><b>Your Profile</b></h2>
+            <p class="error">Error! <?php echo $error; ?> <br>Please try again.</p>
             <?php include('forms/updateInfoForm.php'); ?><br>
 
             <?php include('forms/changePasswordForm.php'); ?>

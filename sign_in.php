@@ -24,4 +24,3 @@
             <p>&copy; 2020 UGA Marketplace</p>
         </footer>
     </body>
-</html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
-        <title>UGA Merch!</title>
+        <title>Admin</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="css/main_stylesheet.css">
     </head>
@@ -31,7 +30,7 @@
         </header>
         <nav id="nav_list">
                 <ul>
-                    <li><a href="index.php" class="current">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li class="noHighlight">Clothing
                         <ul>
@@ -45,34 +44,16 @@
                         <ul>
                             <a href="edit_profile.php"><li>Edit Profile</li></a>
                             <a href="create_account.php"><li>Create Account</li></a>
-                            <a href="admin_page.php"><li>Admin</li></a>
+                            <a href="admin_page.php" class="current"><li>Admin</li></a>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
         <main>
-            <h1>Featured Items</h1><br>
-            <aside>
-                <img src="images/shirt1.jpg" height="200"><br>
-                <h2>Long Sleeve Grey T-Shirt</h2>
-                <p>$39.99</p>
-            </aside>
-            <aside>
-                <img src="images/pants2.jpg" height="200"><br>
-                <h2>UGA Jogger Pants</h2>
-                <p>$42.00</p>
-            </aside>
-            <aside>
-                <img src="images/hat3.jpg" height="200"><br>
-                <h2>Red Georgia Hat</h2>
-                <p>$24.99</p>
-            </aside>
-            <aside>
-                <img src="images/accessories1.jpg" height="200"><br>
-                <h2>UGA Clear Tote Bag</h2>
-                <p>$13.99</p>
-            </aside>
+        <h1>Successfully Added Products</h1>
+            <a href="admin_page.php"><button>Admin Page</button></a><br><br><br>
+            <a href="addproduct.php"><button>Add Another Product</button></a>
         </main>
 
         <footer>

@@ -7,12 +7,13 @@
         header("Location: sign_in.php");
     }
     else {
+        
         include('edit_profile_header.php');
 ?>
 
-
         <main>
             <h2><b>Your Profile</b></h2>
+            <p id = "success">Your profile has been successfully updated!</p>
             <?php include('forms/updateInfoForm.php'); ?><br>
 
             <?php include('forms/changePasswordForm.php'); ?>

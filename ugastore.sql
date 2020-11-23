@@ -44,37 +44,21 @@ CREATE TABLE `user` (
   `username` varchar(45) NOT NULL,
   `email` varchar(45) DEFAULT NULL UNIQUE,
   `password` varchar(255) DEFAULT NULL,
+  `user_type` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `admin`
+-- Dumping data for table `user`
 --
 
-DROP TABLE IF EXISTS `admin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`admin_id`),
-  FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Table structure for table `customer`
---
-
-DROP TABLE IF EXISTS `customer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `customer` (
-  `customer_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`customer_id`),
-  FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Tommy','Lee', 'tommy', 'tommylee@gmail.com', 'password', 'admin');
+INSERT INTO `user` VALUES (2,'Kyle','Cameron', 'kyle', 'kylecameron@gmail.com', 'password', 'customer');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `product`
@@ -119,23 +103,6 @@ INSERT INTO `product` VALUES (16,'UGA Logo Car Flag','accessories','19.99','imag
 UNLOCK TABLES;
 
 --
--- Table structure for table `order`
---
-
-DROP TABLE IF EXISTS `order`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `order` (
-  `order_id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  PRIMARY KEY (`order_id`),
-  FOREIGN KEY (`customer_id`) REFERENCES `customer`(`customer_id`),
-  FOREIGN KEY (`product_id`) REFERENCES `product`(`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `paymentcard`
 --
 
@@ -144,12 +111,12 @@ DROP TABLE IF EXISTS `paymentcard`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paymentcard` (
   `paymentCard_id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `cardNumber` int(11) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
   `expDate` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`paymentCard_id`),
-  FOREIGN KEY (`customer_id`) REFERENCES `customer`(`customer_id`)
+  FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -179,14 +146,31 @@ DROP TABLE IF EXISTS `shopping cart`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `shopping cart` (
   `shoppingCart_id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   PRIMARY KEY (`shoppingCart_id`),
-  FOREIGN KEY (`customer_id`) REFERENCES `customer`(`customer_id`)
+  FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `shopping cart`
+-- Table structure for table `order`
+--
+
+DROP TABLE IF EXISTS `order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `shoppingCart_id` int(11) NOT NULL,
+  PRIMARY KEY (`order_id`),
+  FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`),
+  FOREIGN KEY (`shoppingCart_id`) REFERENCES `shopping cart`(`shoppingCart_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contains`
 --
 
 DROP TABLE IF EXISTS `contains`;

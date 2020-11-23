@@ -84,7 +84,7 @@ header a:link, header a:visited {
     background-color: rgb(186, 12, 47);
     display: inline-block;
     padding: 10px 35px;
-    width: 120px;
+    width: 130px;
     position: relative;
     margin: 0;
 }
@@ -103,7 +103,7 @@ header a:link, header a:visited {
 #nav_list ul ul{
     display: none;
     position: absolute;
-    margin-left: -25px;
+    margin-left: -15px;
     margin-top: 5px;
     padding: 0;
     text-align: center;
@@ -125,30 +125,15 @@ header a:link, header a:visited {
 /* MAIN CSS */
 main {
     clear: left;
+    text-align: left;
     padding-top: 1em;
     min-height: 550px;
-    padding: 2em;
+    margin-left: 2em;
 }
 aside {
     float:left;
     margin: 5em;
     margin-left: 12em;
-}
-/* SIGN-IN FORM */
-#signInForm {
-    width: 50%;
-    margin: auto;
-}
-#signInForm fieldset {
-    padding: 2em;
-    padding-top: 1em;
-}
-#signInForm input {
-    margin: 1em;
-}
-#createAccountButton a {
-    text-decoration: none;
-    color: black;
 }
 
 /* CREATE ACCOUNT FORM */
@@ -162,9 +147,34 @@ aside {
     margin: 5px;
     width: 12em;
 }
+select {
+    margin: 5px;
+    width: 12.5em;
+}
+#clearFloat {
+    clear: both;
+}
 #createAccountForm fieldset {
     width: 50%;
     padding: 10px;
+}
+
+/* CSS IF USER NEEDS TO LOGOUT */
+#needToLogout {
+    text-align: center;
+}
+#logoutButton {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color: black;
+    width: 8em;
+    margin-left: 42em;
+}
+#logoutButton a:link, #logoutButton a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: large;
 }
 
 /* FOOTER CSS */
@@ -175,9 +185,6 @@ footer {
     background-color: black;
     color: white;
     height: 3em;
-    padding: 0;
-    margin: 0;
+    margin-top: 10%;
     padding: 3px;
 }
-
-

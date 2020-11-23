@@ -12,11 +12,18 @@
     $password = $_POST['password'] ?? '';
     $user = $_POST['username'] ?? '';
 
+    $cardNumber = $_POST['cardNumber'];
+    $cardType = $_POST['cardType'];
+    $cardExp = $_POST['cardExp'];
+
     $query="INSERT INTO user (firstName, lastName, username, email, password) VALUES ('$first', '$last', '$user', '$email', '$password')";
     $db->exec($query);
     $query1="INSERT INTO profile (user_id, streetAddr, city, state, zip) VALUES ('$user_id', '$address', '$city', '$state', '$zip')";
     $db->exec($query1);
-    
-    
-    include('index.php');
+
+    session_start();
+    $_SESSION['username'] = $user;
+    $_SESSION['password'] = $password;
+    $_SESSION['flag'] = 1;
+    header("Location:index.php");
 ?>

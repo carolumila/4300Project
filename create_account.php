@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+    <script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("firstPassword").value;
+            var confirmPassword = document.getElementById("secondPassword").value;
+            if (password != confirmPassword) {
+                alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
     <head>
         <title>Create Account</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/create_account_stylesheet.css">
+        <link rel="stylesheet" href="css/create_account_stylesheet2.css">
     </head>
 
     <body>
         <header>
                 <a href="index.php"><img id="imageheader" src="images/UGA_logo.png" height="95" alt="logo"></a>
                 <h1 id="title">UGA Marketplace!</h1>
-                <form id="searchBarForm" action="results.php" method="GET">
+                <form id="searchBarForm" action="searchResults.php" method="GET">
                     <input type="text" id="searchBar" name="search" placeholder="Search">
                     <button type="submit" id="searchButton"><img src="images/magnifying_glass.png" height="15" width="15"></button>
                 </form>
                         
                 <p class="headerLinks" id="shoppingCart"><a href="shopping_cart.php" >Shopping Cart</a></p>
+                <?php 
+                    session_start();
+                    if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
                 <p class="headerLinks" id="signIn"><a href="sign_in.php" >Sign In</a></p>
+                <?php
+                    }
+                    else { ?>
+                <p class="headerLinks" id="signIn"><a href="logout.php" >Logout</a></p>
+                <?php
+                    }
+                ?>
             </header>
             <nav id="nav_list">
                     <ul>
-                        <li><a href="index.php" class="current">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about_us.php">About Us</a></li>
                         <li class="noHighlight">Clothing
                             <ul>
@@ -33,13 +58,15 @@
                         <li class="noHighlight">Account
                             <ul>
                                 <a href="edit_profile.php"><li>Edit Profile</li></a>
-                                <a href="create_account.php"><li>Create Account</li></a>
+                                <a href="create_account.php" class="current"><li>Create Account</li></a>
                                 <a href="admin_page.php"><li>Admin</li></a>
                             </ul>
                         </li>
                     </ul>
                 </nav>
 
+        <?php 
+            if(!isset($_SESSION['flag']) || $_SESSION['flag'] != 1) { ?>
         <main>
             <h2><b>Create Account</b></h2>
             <form id="createAccountForm" action="newAccount.php" method="POST">
@@ -76,17 +103,46 @@
                     <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
 
                     <label for="password">Create Password:</label>
-                    <input type="password" name="password" placeholder="password"><br>
+                    <input type="password" name="password" id="firstPassword" placeholder="password" onkeyup="checkPass();"><br>
 
                     <label for="password2">Confirm Password:</label>
-                    <input type="password" name="password2" placeholder="password"><br>
+                    <input type="password" name="password2" id="secondPassword" placeholder="password" onkeyup="checkPass();"><br>
                 </fieldset><br>
 
-                <button type="submit" id="createAccountButton">Create Account</button>
+                <fieldset id="cardInfo">
+                    <legend><b>Card Information</b></legend>
+
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" required><br>
+
+                    <label for="cardType">Card Type:</label>
+                    <select name="cardType" required>
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                        <option>Discover</option>
+                        <option>American Express</option>
+                    </select><br>
+
+                    <label id="clearFloat" for="cardExp">Expiration Date:</label>
+                    <input type="text" name="cardExp" placeholder="mm/yy" required><br>
+
+                </fieldset><br>
+
+                <button type="submit" id="createAccountButton" onclick="return Validate()">Create Account</button>
 
                 
             </form>
         </main>
+        <?php
+            }
+            else { ?>
+        <main id="needToLogout">
+                <h2 id= "logoutStatement"> Please logout to create a new account.</h2><br>
+                <p id="logoutButton"><a href="logout.php" >Logout Here</a></p>
+        </main>
+        <?php
+            }
+        ?>
 
         <footer>
             <p>&copy; 2020 UGA Marketplace</p>
