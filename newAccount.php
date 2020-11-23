@@ -18,8 +18,10 @@
 
     $query="INSERT INTO user (firstName, lastName, username, email, password) VALUES ('$first', '$last', '$user', '$email', '$password')";
     $db->exec($query);
-    $query1="INSERT INTO profile (user_id, streetAddr, city, state, zip) VALUES ('$user_id', '$address', '$city', '$state', '$zip')";
+    $query1="INSERT INTO profile (streetAddr, city, state, zip) VALUES ('$address', '$city', '$state', '$zip')";
     $db->exec($query1);
+    $query2="INSERT INTO paymentcard (cardNumber, type, expDate) VALUES ('$cardNumber', '$cardType', '$cardExp')";
+    $db->exec($query2);
 
     session_start();
     $_SESSION['username'] = $user;

@@ -110,8 +110,7 @@ DROP TABLE IF EXISTS `paymentcard`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paymentcard` (
-  `paymentCard_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `cardNumber` int(11) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
   `expDate` varchar(45) DEFAULT NULL,
