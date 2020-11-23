@@ -57,7 +57,7 @@
                 <img src="images/shirt1.jpg" height="200"><br>
                 <h2>Long Sleeve Grey T-Shirt</h2>
                 <p>$39.99</p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="index">
                     <input type="hidden" name="productCategory" value="shirts">
                     <input type="hidden" name ="productID" value="1">
@@ -68,7 +68,7 @@
                 <img src="images/pants2.jpg" height="200"><br>
                 <h2>UGA Jogger Pants</h2>
                 <p>$42.00</p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="index">
                     <input type="hidden" name="productCategory" value="pants">
                     <input type="hidden" name ="productID" value="10">
@@ -79,7 +79,7 @@
                 <img src="images/hat3.jpg" height="200"><br>
                 <h2>Red Georgia Hat</h2>
                 <p>$24.99</p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="index">
                     <input type="hidden" name="productCategory" value="hats">
                     <input type="hidden" name ="productID" value="7">
@@ -90,7 +90,7 @@
                 <img src="images/accessories1.jpg" height="200"><br>
                 <h2>UGA Clear Tote Bag</h2>
                 <p>$13.99</p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="index">
                     <input type="hidden" name="productCategory" value="accessories">
                     <input type="hidden" name ="productID" value="13">

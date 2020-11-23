@@ -69,7 +69,7 @@
                 <img src="<?php echo $item['path']?>" alt="<?php echo $item['name']?>" height="200">
                 <p><?php echo $item['name']?></p>
                 <p>$<?php echo $item['price']?></p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="yes">
                     <input type="hidden" name="productCategory" value="<?php echo $search;?>">
                     <input type="hidden" name ="productID" value="<?php echo $item['product_id'];?>">

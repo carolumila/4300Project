@@ -63,7 +63,7 @@
     <head>
         <title>UGA Merch!</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/checkout_stylesheet.css">
     </head>
 
     <body>
@@ -143,6 +143,7 @@
             <h3><b>Order Summary</b></h3>
             <p>Items (<?php echo $num?>): $<?php echo $priceSum?></p>
             <p>Order Total : $<?php echo $priceSum?></p>
+
             <a id="link" href="shopping_cart.php">Back to Shopping Cart</a>
         </main>
 
