@@ -20,6 +20,8 @@
     $db->exec($query);
     $query1="INSERT INTO profile (user_id, streetAddr, city, state, zip) VALUES ('$user_id', '$address', '$city', '$state', '$zip')";
     $db->exec($query1);
+    $query2="INSERT INTO paymentcard (customer_id, cardNumber, type, expDate) VALUES ('$user_id', '$cardNumber', '$cardType', '$cardExp')";
+    $db->exec($query2);
 
     session_start();
     $_SESSION['username'] = $user;
