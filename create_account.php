@@ -18,7 +18,7 @@
     <head>
         <title>Create Account</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/create_account_stylesheet.css">
+        <link rel="stylesheet" href="css/create_account_stylesheet2.css">
     </head>
 
     <body>
@@ -107,6 +107,25 @@
 
                     <label for="password2">Confirm Password:</label>
                     <input type="password" name="password2" id="secondPassword" placeholder="password" onkeyup="checkPass();"><br>
+                </fieldset><br>
+
+                <fieldset id="cardInfo">
+                    <legend><b>Card Information</b></legend>
+
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" required><br>
+
+                    <label for="cardType">Card Type:</label>
+                    <select name="cardType" required>
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                        <option>Discover</option>
+                        <option>American Express</option>
+                    </select><br>
+
+                    <label id="clearFloat" for="cardExp">Expiration Date:</label>
+                    <input type="text" name="cardExp" placeholder="mm/yy" required><br>
+
                 </fieldset><br>
 
                 <button type="submit" id="createAccountButton" onclick="return Validate()">Create Account</button>
