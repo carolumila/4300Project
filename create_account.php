@@ -3,17 +3,20 @@
 
 
 
-    <script type="text/javascript">
-        function Validate() {
-            var password = document.getElementById("firstPassword").value;
-            var confirmPassword = document.getElementById("secondPassword").value;
-            if (password != confirmPassword) {
-                alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
-                return false;
-            }
-            return true;
+<script type="text/javascript">
+function checkform() {
+        var password = document.getElementById("firstPassword").value;
+        var confirmPassword = document.getElementById("secondPassword").value;
+        var pass = document.getElementById("passError");
+        if (password != confirmPassword) {
+            pass.innerHTML = "Passwords do not match. Try again.";
+            return false;
+        } else{
+            pass.innerHTML = "";
         }
-    </script>
+    return true;
+}
+</script>
 
     <head>
         <title>Create Account</title>
@@ -74,22 +77,22 @@
                     <legend><b>Personal Information</b></legend>
                     
                     <label for="firstName">First Name:</label>
-                    <input type="text" name="firstName" placeholder="First Name"><br>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required><br>
 
                     <label for="lastName">Last Name:</label>
-                    <input type="text" name="lastName" placeholder="Last Name"><br><br>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required><br><br>
 
                     <label for="streetAddress">Street Address:</label>
-                    <input type="text" name="streetAddress" placeholder="123 Dawg St."><br>
+                    <input type="text" name="streetAddress" id="streetAddress" placeholder="123 Dawg St." required><br>
 
                     <label for="city">City:</label>
-                    <input type="text" name="city" placeholder="Athens"><br>
+                    <input type="text" name="city" id="city" placeholder="Athens" required><br>
 
                     <label for="state">State:</label>
-                    <input type="text" name="state" placeholder="Georgia"><br>
+                    <input type="text" name="state" id="state" placeholder="Georgia" required><br>
 
                     <label for="zipCode">Zip Code:</label>
-                    <input type="text" name="zipCode" placeholder="30606"><br>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="30606" required><br>
 
                 </fieldset> <br>
 
@@ -97,16 +100,17 @@
                     <legend><b>Account Information</b></legend>
 
                     <label for="username">Username:</label>
-                    <input type="text" name="username" placeholder="hairydawg123"><br>
+                    <input type="text" name="username" placeholder="hairydawg123" required><br>
 
                     <label for="email">Email Address:</label>
-                    <input type="text" name="email" placeholder="hairydawg123@uga.edu"><br>
+                    <input type="text" name="email" placeholder="hairydawg123@uga.edu" required><br>
 
                     <label for="password">Create Password:</label>
-                    <input type="password" name="password" id="firstPassword" placeholder="password" onkeyup="checkPass();"><br>
+                    <input type="password" name="password" id="firstPassword" placeholder="password" onkeyup="checkPass();" required>
+                    <abbr id="passError" style="color:red;"></abbr><br>
 
                     <label for="password2">Confirm Password:</label>
-                    <input type="password" name="password2" id="secondPassword" placeholder="password" onkeyup="checkPass();"><br>
+                    <input type="password" name="password2" id="secondPassword" placeholder="password" onkeyup="checkPass();" required><br>
                 </fieldset><br>
 
                 <fieldset id="cardInfo">
@@ -128,7 +132,7 @@
 
                 </fieldset><br>
 
-                <button type="submit" id="createAccountButton" onclick="return Validate()">Create Account</button>
+                <button type="submit" id="createAccountButton" onclick="return checkform()">Create Account</button>
 
                 
             </form>
