@@ -107,7 +107,7 @@
                     <th>Name</th>
                     <th>Category</th>
                     <th>Price</th>
-                    <th></th>
+                    <!--<th></th>-->
             <?php foreach($products as $product):?>
                 <tr>
                     <td><?php echo $product['product_id']?></td>
