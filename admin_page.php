@@ -50,10 +50,16 @@
                 </ul>
             </nav>
 
+        <?php if(!isset($_SESSION['userType']) || $_SESSION['userType'] == 'admin') { ?>
         <main>
             <a href="manageusers.php"><img src="images/manageusers.png" alt="manageusers" height="150"><p><strong>Manage Users</strong></p></a><br><br><br>
             <a href="addproduct.php"><img src="images/addproduct.png" alt="addproduct" height="150"><p><strong>Add Products</strong></p></a>
         </main>
+        <?php } else { ?>
+        <main>
+            <p>You do not have administrative access.</p>
+        </main>
+        <?php } ?>
 
         <footer>
             <p>&copy; 2020 UGA Marketplace</p>

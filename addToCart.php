@@ -28,3 +28,5 @@ if($isSearch=='no') {
 } else if($isSearch == 'index') {
     header("Location: index.php");
 }
+
+?>

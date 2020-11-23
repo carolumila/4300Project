@@ -20,6 +20,7 @@ if($data->rowCount() > 0) {
     
     $_SESSION['flag'] = 1;
     $_SESSION['userID'] = $data1['user_id'];
+    $_SESSION['userType'] = $data1['user_type'];
     header("Location:index.php");
 }
 else {

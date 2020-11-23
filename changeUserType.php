@@ -10,9 +10,11 @@
     if($user['user_type'] == 'admin'){ 
         $query = "UPDATE user SET user_type='customer' WHERE user_id='$userID'"; 
         $db->exec($query); 
+        $_SESSION['userType'] = 'customer';
     }else{ 
         $query = "UPDATE user SET user_type='admin' WHERE user_id='$userID'"; 
         $db->exec($query);
+        $_SESSION['userType'] = 'admin';
     }
 
     include('manageusers.php');

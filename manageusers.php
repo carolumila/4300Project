@@ -75,7 +75,7 @@
                         <td>
                             <form action="changeUserType.php" method="POST">
                                 <input type="hidden" name="userID" value=<?php echo $user['user_id']?>>
-                                <input type="submit" value="Change Type">
+                                <input type="submit" value="Change Type" <?php if($user['user_id'] == $_SESSION['userID']) { ?>disabled<?php }?>>
                                 
                             </form>
                         </td>
