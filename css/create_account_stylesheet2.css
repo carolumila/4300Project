@@ -147,10 +147,19 @@ aside {
     margin: 5px;
     width: 12em;
 }
+select {
+    margin: 5px;
+    width: 12.5em;
+}
+#clearFloat {
+    clear: both;
+}
 #createAccountForm fieldset {
     width: 50%;
     padding: 10px;
 }
+
+/* CSS IF USER NEEDS TO LOGOUT */
 #needToLogout {
     text-align: center;
 }
