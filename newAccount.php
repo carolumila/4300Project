@@ -23,6 +23,16 @@
     $query2="INSERT INTO paymentcard (cardNumber, type, expDate) VALUES ('$cardNumber', '$cardType', '$cardExp')";
     $db->exec($query2);
 
+    $query3 = "SELECT * FROM user 
+               WHERE username='$user' AND password='$password'";
+    $statement = $db->prepare($query3);
+    $statement->execute();
+    $data = $statement->fetch();
+    $userID = $data['user_id'];
+
+    $query4="INSERT INTO `shopping cart` (user_id) VALUES ('$userID')";
+    $db->exec($query4);
+
     session_start();
     $_SESSION['username'] = $user;
     $_SESSION['password'] = $password;
