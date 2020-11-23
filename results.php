@@ -75,6 +75,12 @@
                 <img src="<?php echo $item['path']?>" alt="<?php echo $item['name']?>" height="200">
                 <p><?php echo $item['name']?></p>
                 <p>$<?php echo $item['price']?></p>
+                <form class="addToCart" action="addtoCart.php" method="POST">
+                    <input type="hidden" name="isSearch" value="no">
+                    <input type="hidden" name="productCategory" value="<?php echo $category_name;?>">
+                    <input type="hidden" name ="productID" value="<?php echo $item['product_id'];?>">
+                    <input type = "submit" value="Add to cart">
+                </form>
             </aside>
         <?php endforeach;?>
         </main>

@@ -53,7 +53,7 @@
     <head>
         <title>UGA Merch!</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/shopping_cart_stylesheet.css">
     </head>
 
     <body>
@@ -101,7 +101,7 @@
 
         <main>
             <h2><b>Your Shopping Cart</b></h2>
-            <table>
+            <table id="cart">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>

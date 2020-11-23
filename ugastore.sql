@@ -114,7 +114,6 @@ CREATE TABLE `paymentcard` (
   `cardNumber` int(11) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
   `expDate` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`paymentCard_id`),
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
