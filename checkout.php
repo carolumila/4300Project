@@ -110,41 +110,52 @@
         </nav>
 
         <main>
-            <h2><b>Checkout</b></h2>
-            <h3><b>Shipping Address</b></h3>
-            <?php foreach($addr as $a):?>
-                <?php echo $a['streetAddr']?>
-                <?php echo $a['city']?>
-                <?php echo $a['state']?>
-                <?php echo $a['zip']?>
-            <?php endforeach;?>
-            <h3><b>Payment Method</b></h3>
-            <?php foreach($card as $c):?>
-                <?php echo $c['cardNumber']?>
-                <?php echo $c['type']?>
-                <?php echo $c['expDate']?>
-            <?php endforeach;?>
+            <h1 class="underline"><b>Checkout</b></h1>
+            <aside>
             <h3><b>Review Items</b></h3>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-            <?php foreach($products as $product):?>
-                <tr>
-                    <td><?php echo $product['product_id']?></td>
-                    <td><?php echo $product['name']?></td>
-                    <td><?php echo $product['category']?></td>
-                    <td><?php echo $product['price']?></td>
-                </tr>
-            <?php endforeach;?>
-            </table>
-            <h3><b>Order Summary</b></h3>
-            <p>Items (<?php echo $num?>): $<?php echo $priceSum?></p>
-            <p>Order Total : $<?php echo $priceSum?></p>
+                <table id="cart">
+                    <tr>
+                    <th width="25px">ID</th>
+                    <th width="300px">Name</th>
+                    <th width="100px">Category</th>
+                    <th width="50px">Price</th>
+                <?php foreach($products as $product):?>
+                    <tr>
+                        <td><?php echo $product['product_id']?></td>
+                        <td><?php echo $product['name']?></td>
+                        <td><?php echo $product['category']?></td>
+                        <td><?php echo $product['price']?></td>
+                    </tr>
+                <?php endforeach;?>
+                </table>
+            </aside>
+            <aside id="orderReview">
+                <h3>Please review your order information.</h3>
+                <p class="underline"><b>Shipping Address:</b></p>
+                <?php foreach($addr as $a):?>
+                    <?php echo $a['streetAddr']?>
+                    <?php echo $a['city']?>
+                    <?php echo $a['state']?>
+                    <?php echo $a['zip']?>
+                <?php endforeach;?>
+                <p class="underline"><b>Payment Method:</b></p>
+                <?php foreach($card as $c):?>
+                    <p>Card number: <?php echo $c['cardNumber']?></p>
+                    <p>Card type: <?php echo $c['type']?></p>
+                    <p>Card expiration date: <?php echo $c['expDate']?></p>
+                <?php endforeach;?>
+                <p class="underline"><b>Order Summary:</b></p>
+                <p>Items (<?php echo $num?>): $<?php echo $priceSum?></p>
+                <p>Order Total : $<?php echo $priceSum?></p>
 
-            <a id="link" href="shopping_cart.php">Back to Shopping Cart</a>
+                <form>
+                    <input type="submit" value="Submit Order">
+                </form>
+            </aside>
+            <div id="links">
+                <p class="link" id="link1"><a href="shopping_cart.php">Back to Shopping Cart</a></p>
+                <p class="link" id="link2"><a href="edit_profile.php">Edit Profile Information</a></p>
+            </div>
         </main>
 
         <footer>

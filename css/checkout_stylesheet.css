@@ -131,19 +131,56 @@ main {
 }
 aside {
     float:left;
-    margin: 5em;
-    margin-left: 12em;
-    width: 50px;
+    width: 500px;
+    height: 400px;
+    margin-bottom: 3em;
+    margin-left: 10em;
 }
 
 /* CHECKOUT */
 table {
     margin-left:auto;
     margin-right:auto;
-    border:1px solid black;
+    border:3px solid black;
+    border-collapse: collapse;
 }
-th, tr {
+#cart th {
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    height: 10px;
+}
+#cart tr, #cart td{
+    border: 1px solid black;
+    padding: 5px;
+}
+.link {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color: black;
+    width: 8em;
+    clear:both;
+    display: inline;
+    margin: 1em;
+}
+.link a:link, .link a:visited {
+    text-decoration: none;
+    color: black;
+}
+#links {
+    clear:both;
+    display: inline-block;
+    width: 500px;
+    height: 100px;
+}
+
+#orderReview {
+    text-align: left;
+    padding-left: 1em;
+}
+.underline {
+    text-decoration: underline;
 }
 
 /* FOOTER CSS */
