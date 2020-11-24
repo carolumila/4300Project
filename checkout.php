@@ -148,7 +148,7 @@
                 <p>Items (<?php echo $num?>): $<?php echo $priceSum?></p>
                 <p>Order Total : $<?php echo $priceSum?></p>
 
-                <form>
+                <form action="submitOrder.php" method="post">
                     <input type="submit" value="Submit Order">
                 </form>
             </aside>
