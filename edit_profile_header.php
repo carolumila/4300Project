@@ -16,6 +16,12 @@
     $statement1->execute();
     $profile = $statement1->fetch();
 
+    $query2 = "SELECT * FROM paymentcard
+                WHERE user_id = '$userID'";
+    $statement2 = $db->prepare($query2);
+    $statement2->execute();
+    $data2 = $statement2->fetch();
+
 ?>
 
 <!DOCTYPE html>

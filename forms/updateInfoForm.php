@@ -33,5 +33,24 @@
 
                 </fieldset><br>
 
+                <fieldset id="cardInfo">
+                    <legend><b>Card Information</b></legend>
+
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" value = "<?php echo $data2['cardNumber']; ?>"><br>
+
+                    <label for="cardType">Card Type:</label>
+                    <select style="margin:5px; width:12.5em;" name="cardType" value = "<?php echo $data2['cardType']; ?>">
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                        <option>Discover</option>
+                        <option>American Express</option>
+                    </select><br>
+
+                    <label style="clear: both;" for="cardExp">Expiration Date:</label>
+                    <input type="month" name="cardExp"  value = "<?php echo $data2['expDate']; ?>"><br>
+
+                </fieldset><br>
+
                 <button type="submit" id="updateAccountButton">Update Account</button>
             </form>
