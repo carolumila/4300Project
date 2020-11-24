@@ -3,7 +3,7 @@
     <head>
         <title>Admin</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/admin_page_stylesheet.css">
     </head>
 
     <body>
@@ -51,30 +51,30 @@
             </nav>
 
         <main>
-            <form action="add.php" method="POST">
-                <div class="form-group">
-                    <label for="product name"><b>Product Name</b></label>
-                    <input type="text" placeholder="Enter Product Name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="category"><b>Category</b></label>
+            <form id="addProductForm" action="add.php" method="POST">
+                <fieldset>
+                    <legend>Add Product</legend>
+
+                    <label for="name"><b>Product Name:</b></label>
+                    <input type="text" placeholder="Enter Product Name" name="name" required><br>
+                
+                    <label for="category"><b>Category:</b></label>
                     <select name="category" id="categories">
                         <option value="0"></option>
                         <option value="shirts">shirts</option>
                         <option value="hats">hats</option>
                         <option value="pants">pants</option>
                         <option value="accessories">accessories</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="Price"><b>Price<span class="auto-style1"></span></b></label>
-                    <input type="number" placeholder="Enter Price" name="price" step="0.01" required>
-                </div>
-                <div class="form-group">
+                    </select><br>
+                
+                    <label id="clearFloat" for="Price"><b>Price:<span class="auto-style1"></span></b></label>
+                    <input type="number" placeholder="Enter Price" name="price" step="0.01" required><br>
+                
                     <input type="submit" value="Add">
-                </div>
-
+                </fieldset>
             </form>
+
+            <p class="link"><a href="admin_page.php">Return to Admin Page</a></p>
         </main>
 
         <footer>
