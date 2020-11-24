@@ -67,7 +67,7 @@
                 3 MySQL entities<br>
                 2 User interactions that change the database records<br>
                 1 dynamically generated records such as a list<br>
-                1 Usage of Javascript to validate uder input<br>
+                1 Usage of Javascript to validate user input<br>
                 1 CSS File<br>
             </p>
         </main>
