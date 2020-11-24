@@ -149,7 +149,7 @@
                 <p>Order Total : $<?php echo $priceSum?></p>
 
                 <form action="submitOrder.php" method="post">
-                <input type="submit" value="Submit Order" <?php if(($products->rowCount()) == "0") { ?>disabled<?php } ?>>
+                    <input type="submit" value="Submit Order" <?php if(($products->rowCount()) == "0") { ?>disabled<?php } ?>>
                 </form>
             </aside>
             <div id="links">

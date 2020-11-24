@@ -111,7 +111,7 @@ DROP TABLE IF EXISTS `paymentcard`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paymentcard` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cardNumber` varchar(19) DEFAULT NULL,
+  `cardNumber` varchar(45) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
   `expDate` varchar(45) DEFAULT NULL,
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
@@ -178,23 +178,6 @@ INSERT INTO `shopping cart` VALUES (1,1);
 INSERT INTO `shopping cart` VALUES (2,2);
 /*!40000 ALTER TABLE `shopping cart` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `order`
---
-
-DROP TABLE IF EXISTS `order`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `order` (
-  `order_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `shoppingCart_id` int(11) NOT NULL,
-  PRIMARY KEY (`order_id`),
-  FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`),
-  FOREIGN KEY (`shoppingCart_id`) REFERENCES `shopping cart`(`shoppingCart_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `contains`

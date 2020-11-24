@@ -117,7 +117,7 @@ function checkform() {
                     <legend><b>Card Information</b></legend>
 
                     <label for="cardNumber">Card Number:</label>
-                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" pattern="([0-9]{4}( )){3}[0-9]{4}" title="Required format: xxxx xxxx xxxx xxxx" required><br>
+                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" pattern="([0-9]{4}( )){3}[0-9]{4} [0-9]{4}( )){3}[0-9]{4}|[0-9]{16}" title="Required format: xxxx xxxx xxxx xxxx" required><br>
 
                     <label for="cardType">Card Type:</label>
                     <select name="cardType" required>
