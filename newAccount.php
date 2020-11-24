@@ -38,5 +38,6 @@
     $_SESSION['password'] = $password;
     $_SESSION['flag'] = 1;
     $_SESSION['userID'] = $userID;
+    $_SESSION['userType'] = 'customer';
     header("Location:index.php");
 ?>
