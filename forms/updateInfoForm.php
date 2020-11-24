@@ -40,11 +40,29 @@
                     <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" value = "<?php echo $data2['cardNumber']; ?>" pattern="([0-9]{4}( )){3}[0-9]{4}" title="Required format: xxxx xxxx xxxx xxxx" required><br>
 
                     <label for="cardType">Card Type:</label>
-                    <select style="margin:5px; width:12.5em;" name="cardType" value = "<?php echo $data2['cardType']; ?>" required>
-                        <option>Mastercard</option>
-                        <option>Visa</option>
-                        <option>Discover</option>
-                        <option>American Express</option>
+                    <select style="margin:5px; width:12.5em;" name="cardType" required>
+                    <?php 
+                        if($data2['type'] == 'Mastercard') { ?>
+                        <option value="Mastercard" selected>Mastercard</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Discover">Discover</option>
+                        <option value="American Express">American Express</option>
+                    <?php } else if ($data2['type'] == "Visa") { ?>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Visa" selected>Visa</option>
+                        <option value="Discover">Discover</option>
+                        <option value="American Express">American Express</option>
+                    <?php } else if ($data2['type'] == "Discover") { ?>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Discover" selected>Discover</option>
+                        <option value="American Express">American Express</option>
+                    <?php } else if ($data2['type'] == "American Express") { ?>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Discover">Discover</option>
+                        <option value="American Express" selected>American Express</option>
+                    <?php } ?>
                     </select><br>
 
                     <label style="clear: both;" for="cardExp">Expiration Date:</label>
