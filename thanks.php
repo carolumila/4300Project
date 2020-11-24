@@ -1,17 +1,10 @@
-<?php
-    include('database.php');
-
-    $query = 'SELECT * FROM user';
-
-    $users = $db->query($query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Admin</title>
+    
+        <title>Thanks!</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/admin_page_stylesheet.css">
+        <link rel="stylesheet" href="css/thanks_stylesheet.css">
     </head>
 
     <body>
@@ -38,7 +31,7 @@
         </header>
         <nav id="nav_list">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php" >Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li class="noHighlight">Clothing
                         <ul>
@@ -52,38 +45,18 @@
                         <ul>
                             <a href="edit_profile.php"><li>Edit Profile</li></a>
                             <a href="create_account.php"><li>Create Account</li></a>
-                            <a href="admin_page.php" class="current"><li>Admin</li></a>
+                            <a href="admin_page.php"><li>Admin</li></a>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
         <main>
-            <table id="users">
-                <tr>
-                    <th>User ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>User Type</th>
-                    <th>Promote/Demote</th>
-                    <tr>
-                        <?php foreach($users as $user):?>
-                        <td><?php echo $user['user_id']?></td>
-                        <td><?php echo $user['firstName']?></td>
-                        <td><?php echo $user['lastName']?></td>
-                        <td><?php echo $user['user_type']?></td>
-                        <td>
-                            <form action="changeUserType.php" method="POST">
-                                <input type="hidden" name="userID" value=<?php echo $user['user_id']?>>
-                                <input type="submit" value="Change Type" <?php if(isset($_SESSION['userID']) && $user['user_id'] == $_SESSION['userID']) { ?>disabled<?php }?>>
-                                
-                            </form>
-                        </td>
-                    </tr>
-                        <?php endforeach;?>
-                </tr>
-            </table><br>
-            <a href="admin_page.php"><button>Back</button></a><br><br><br>
+            <h1>Thanks for your order!</h1><br>
+            <div id="links">
+                <p class="link" id="link1"><a href="index.php">Back to Shopping</a></p>
+                <p class="link" id="link2"><a href="logout.php">Logout</a></p>
+            </div>
         </main>
 
         <footer>

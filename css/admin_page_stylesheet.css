@@ -125,45 +125,19 @@ header a:link, header a:visited {
 /* MAIN CSS */
 main {
     clear: left;
-    text-align: left;
+    text-align: center;
     padding-top: 1em;
     min-height: 550px;
-    margin-left: 2em;
 }
 aside {
     float:left;
     margin: 5em;
     margin-left: 12em;
+    width: 50px;
 }
 
-/* CREATE ACCOUNT FORM */
-#createAccountForm label {
-    margin: 5px;
-    float: left;
-    text-align: left;
-    width: 9em;
-}
-#createAccountForm input {
-    margin: 5px;
-    width: 12em;
-}
-select {
-    margin: 5px;
-    width: 12.5em;
-}
-#clearFloat {
-    clear: both;
-}
-#createAccountForm fieldset {
-    width: 50%;
-    padding: 10px;
-}
-
-/* CSS IF USER NEEDS TO LOGOUT */
-#needToLogout {
-    text-align: center;
-}
-#logoutButton {
+/* CSS IF USER NEEDS TO LOGIN */
+#loginLink {
     border: 1px solid black;
     padding: 5px;
     background-color: grey;
@@ -171,12 +145,76 @@ select {
     width: 8em;
     margin-left: auto;
     margin-right: auto;
-    
 }
-#logoutButton a:link, #logoutButton a:visited {
+#loginLink a:link, #loginLink a:visited {
     text-decoration: none;
     color: black;
     font-size: large;
+}
+
+/* CSS FOR ADMIN PAGE*/
+.link {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color: black;
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.link a:link, .link a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* MANAGE USERS PAGE*/
+#users {
+    margin-left:auto;
+    margin-right:auto;
+    border:2px solid black;
+    border-collapse: collapse;
+}
+#users th {
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    height: 10px;
+}
+#users tr, #users td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* ADD PRODUCT PAGE */
+#addProductForm {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    padding-left: 23em;
+}
+#addProductForm label {
+    margin: 5px;
+    float: left;
+    text-align: left;
+    width: 9em;
+}
+#addProductForm input {
+    margin: 5px;
+    width: 12em;
+}
+#addProductForm select {
+    margin: 5px;
+    width: 12.5em;
+}
+#addProductForm fieldset {
+    width: 50%;
+    padding: 10px;
+    clear: both;
+}
+#clearFloat {
+    clear:both;
 }
 
 /* FOOTER CSS */

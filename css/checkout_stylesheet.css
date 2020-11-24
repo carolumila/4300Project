@@ -125,58 +125,62 @@ header a:link, header a:visited {
 /* MAIN CSS */
 main {
     clear: left;
-    text-align: left;
+    text-align: center;
     padding-top: 1em;
     min-height: 550px;
-    margin-left: 2em;
 }
 aside {
     float:left;
-    margin: 5em;
-    margin-left: 12em;
+    width: 500px;
+    height: 400px;
+    margin-bottom: 3em;
+    margin-left: 10em;
 }
 
-/* CREATE ACCOUNT FORM */
-#createAccountForm label {
-    margin: 5px;
-    float: left;
-    text-align: left;
-    width: 9em;
+/* CHECKOUT */
+table {
+    margin-left:auto;
+    margin-right:auto;
+    border:3px solid black;
+    border-collapse: collapse;
 }
-#createAccountForm input {
-    margin: 5px;
-    width: 12em;
+#cart th {
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    height: 10px;
 }
-select {
-    margin: 5px;
-    width: 12.5em;
+#cart tr, #cart td{
+    border: 1px solid black;
+    padding: 5px;
 }
-#clearFloat {
-    clear: both;
-}
-#createAccountForm fieldset {
-    width: 50%;
-    padding: 10px;
-}
-
-/* CSS IF USER NEEDS TO LOGOUT */
-#needToLogout {
-    text-align: center;
-}
-#logoutButton {
+.link {
     border: 1px solid black;
     padding: 5px;
     background-color: grey;
     color: black;
     width: 8em;
-    margin-left: auto;
-    margin-right: auto;
-    
+    clear:both;
+    display: inline;
+    margin: 1em;
 }
-#logoutButton a:link, #logoutButton a:visited {
+.link a:link, .link a:visited {
     text-decoration: none;
     color: black;
-    font-size: large;
+}
+#links {
+    clear:both;
+    display: inline-block;
+    width: 500px;
+    height: 100px;
+}
+
+#orderReview {
+    text-align: left;
+    padding-left: 1em;
+}
+.underline {
+    text-decoration: underline;
 }
 
 /* FOOTER CSS */

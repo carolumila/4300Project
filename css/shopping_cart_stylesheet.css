@@ -137,8 +137,33 @@ aside {
 }
 
 /* SHOPPING CART */
-#cart th, #cart tr {
+table {
+    margin-left:auto;
+    margin-right:auto;
+    border:3px solid black;
+    border-collapse: collapse;
+}
+#cart th {
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    height: 10px;
+}
+#cart tr, #cart td{
+    border: 1px solid black;
+    padding: 5px;
+}
+#link {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color: black;
+    width: 8em;
+    margin-left: 42em;
+}
+#link a:link, #link a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 /* FOOTER CSS */

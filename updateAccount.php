@@ -11,6 +11,10 @@
     $zip = $_POST['zipCode'];
     $email = $_POST['email'];
 
+    $cardNumber = $_POST['cardNumber'];
+    $cardType = $_POST['cardType'];
+    $cardExp = $_POST['cardExp'];
+
     $userID = $_SESSION['userID'];
 
     try {
@@ -26,6 +30,10 @@
                         zip = '$zip'
                     WHERE user_id = '$userID'";
         $db->exec($query1);
+        $query2="UPDATE paymentcard
+                    SET cardNumber = '$cardNumber', type = '$cardType', expDate = '$cardExp'
+                    WHERE user_id = '$userID'";
+        $db->exec($query2);
 
         header("Location: edit_profile_success.php");
     }

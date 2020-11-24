@@ -119,6 +119,17 @@ CREATE TABLE `paymentcard` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `paymentcard`
+--
+
+LOCK TABLES `paymentcard` WRITE;
+/*!40000 ALTER TABLE `paymentcard` DISABLE KEYS */;
+INSERT INTO `paymentcard` VALUES (1,'1234456778941234','Visa', '2022-10');
+INSERT INTO `paymentcard` VALUES (2,'9876543210123456','Mastercard', '2023-11');
+/*!40000 ALTER TABLE `paymentcard` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `profile`
 --
 
@@ -136,6 +147,17 @@ CREATE TABLE `profile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `profile`
+--
+
+LOCK TABLES `profile` WRITE;
+/*!40000 ALTER TABLE `profile` DISABLE KEYS */;
+INSERT INTO `profile` VALUES (1,'123 Bulldawg Rd','Athens', 'GA', '30606');
+INSERT INTO `profile` VALUES (2,'789 Georgia Way','Athens', 'GA', '30605');
+/*!40000 ALTER TABLE `profile` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `shopping cart`
 --
 
@@ -149,6 +171,13 @@ CREATE TABLE `shopping cart` (
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `shopping cart` WRITE;
+/*!40000 ALTER TABLE `shopping cart` DISABLE KEYS */;
+INSERT INTO `shopping cart` VALUES (1,1);
+INSERT INTO `shopping cart` VALUES (2,2);
+/*!40000 ALTER TABLE `shopping cart` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `order`

@@ -128,11 +128,13 @@ main {
     text-align: center;
     padding-top: 1em;
     min-height: 550px;
+    margin-left: auto;
+    margin-right: auto;
 }
 aside {
     float:left;
     margin: 5em;
-    margin-left: 12em;
+    margin-left: 16em;
     width: 50px;
 }
 /* SIGN-IN FORM */

@@ -73,9 +73,9 @@
         <?php foreach($items as $item):?>
             <aside>
                 <img src="<?php echo $item['path']?>" alt="<?php echo $item['name']?>" height="200">
-                <p><?php echo $item['name']?></p>
+                <p><b><?php echo $item['name']?></b></p>
                 <p>$<?php echo $item['price']?></p>
-                <form class="addToCart" action="addtoCart.php" method="POST">
+                <form class="addToCart" action="addToCart.php" method="POST">
                     <input type="hidden" name="isSearch" value="no">
                     <input type="hidden" name="productCategory" value="<?php echo $category_name;?>">
                     <input type="hidden" name ="productID" value="<?php echo $item['product_id'];?>">

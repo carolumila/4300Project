@@ -103,11 +103,11 @@
             <h2><b>Your Shopping Cart</b></h2>
             <table id="cart">
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th></th>
+                    <th width="25px">ID</th>
+                    <th width="300px">Name</th>
+                    <th width="100px">Category</th>
+                    <th width="50px">Price</th>
+                    <th width="75px"></th>
             <?php foreach($products as $product):?>
                 <tr>
                     <td><?php echo $product['product_id']?></td>
@@ -116,12 +116,12 @@
                     <td><?php echo $product['price']?></td>
                     <td><form action="deleteFromCart.php" method="post">
                     <input type="hidden" name="product_id" value=<?php echo $product['product_id']?>>
-                    <input type="submit" value="Remove"></form></td>
+                    <input type="submit" value="Remove" width="75px"></form></td>
                 </tr>
             <?php endforeach;?>
             </table>
             <p>Subtotal (<?php echo $num?> item(s)) : $<?php echo $priceSum?></p>
-            <a id="link" href="checkout.php">Proceed To Checkout</a>
+            <p id="link"><a href="checkout.php">Proceed To Checkout</a></p>
         </main>
 
         <footer>
