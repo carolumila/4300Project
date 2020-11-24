@@ -1,3 +1,6 @@
+<?php 
+    include('database.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -102,5 +105,6 @@
         <footer>
             <p>&copy; 2020 UGA Marketplace</p>
         </footer>
+        <script src="search.js"></script>
     </body>
 </html>
