@@ -55,7 +55,7 @@
                 }
         ?>
     </header>
-    <nav id="nav_list">
+        <nav id="nav_list">
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about_us.php">About Us</a></li>
@@ -86,15 +86,13 @@
                     <p><b><?php echo $item['name']?></b></p>
                     <p>$<?php echo $item['price']?></p>
                     <form class="addToCart" action="addToCart.php" method="POST">
-                        <input type="hidden" name="isSearch" value="no">
-                        <input type="hidden" name="productCategory" value="<?php echo $category_name;?>">
+                        <input type="hidden" name="isSearch" value="yes">
+                        <input type="hidden" name="searchValue" value="<?php echo $search;?>">
                         <input type="hidden" name ="productID" value="<?php echo $item['product_id'];?>">
                         <input type = "submit" value="Add to cart">
                     </form>
                 </aside>
             <?php endforeach;?>
-
-
         
         </main>
 

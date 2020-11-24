@@ -18,12 +18,13 @@ $db->exec($query1);
 
 
 // return to the appropriate page
-$category = $_POST['productCategory'];
 $isSearch = $_POST['isSearch'];
 if($isSearch=='no') {
+    $category = $_POST['productCategory'];
     header("Location: results.php?search=$category");
 } else if($isSearch == 'yes') {
-    header("Location: searchResults.php?search=$category");
+    $search = $_POST['searchValue'];
+    header("Location: searchResults.php?search=$search");
 } else if($isSearch == 'index') {
     header("Location: index.php");
 }
