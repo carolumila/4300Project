@@ -111,7 +111,7 @@ DROP TABLE IF EXISTS `paymentcard`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paymentcard` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cardNumber` int(11) DEFAULT NULL,
+  `cardNumber` varchar(19) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
   `expDate` varchar(45) DEFAULT NULL,
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
@@ -124,8 +124,8 @@ CREATE TABLE `paymentcard` (
 
 LOCK TABLES `paymentcard` WRITE;
 /*!40000 ALTER TABLE `paymentcard` DISABLE KEYS */;
-INSERT INTO `paymentcard` VALUES (1,'1234456778941234','Visa', '2022-10');
-INSERT INTO `paymentcard` VALUES (2,'9876543210123456','Mastercard', '2023-11');
+INSERT INTO `paymentcard` VALUES (1,'1234 4567 7894 1234','Visa', '2022-10');
+INSERT INTO `paymentcard` VALUES (2,'9876 5432 1012 3456','Mastercard', '2023-11');
 /*!40000 ALTER TABLE `paymentcard` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -37,10 +37,10 @@
                     <legend><b>Card Information</b></legend>
 
                     <label for="cardNumber">Card Number:</label>
-                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" value = "<?php echo $data2['cardNumber']; ?>"><br>
+                    <input type="text" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" value = "<?php echo $data2['cardNumber']; ?>" pattern="([0-9]{4}( )){3}[0-9]{4}" title="Required format: xxxx xxxx xxxx xxxx" required><br>
 
                     <label for="cardType">Card Type:</label>
-                    <select style="margin:5px; width:12.5em;" name="cardType" value = "<?php echo $data2['cardType']; ?>">
+                    <select style="margin:5px; width:12.5em;" name="cardType" value = "<?php echo $data2['cardType']; ?>" required>
                         <option>Mastercard</option>
                         <option>Visa</option>
                         <option>Discover</option>
@@ -48,7 +48,7 @@
                     </select><br>
 
                     <label style="clear: both;" for="cardExp">Expiration Date:</label>
-                    <input type="month" name="cardExp"  value = "<?php echo $data2['expDate']; ?>"><br>
+                    <input type="month" name="cardExp"  value = "<?php echo $data2['expDate']; ?>" required><br>
 
                 </fieldset><br>
 
