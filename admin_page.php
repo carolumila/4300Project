@@ -62,8 +62,8 @@
 
             <?php if(!isset($_SESSION['userType']) || $_SESSION['userType'] == 'admin') { ?>
             <main>
-                <a href="manageusers.php"><img src="images/manageusers.png" alt="manageusers" height="150"><p><strong>Manage Users</strong></p></a><br><br><br>
-                <a href="addproduct.php"><img src="images/addproduct.png" alt="addproduct" height="150"><p><strong>Add Products</strong></p></a>
+                <p class="link"><a href="manageusers.php"><img src="images/manageusers.png" alt="manageusers" height="150"><strong>Manage Users</strong></a></p><br><br><br>
+                <p class="link"><a href="addproduct.php"><img src="images/addproduct.png" alt="addproduct" height="150"><strong>Add Products</strong></a></p>
             </main>
             <?php } else { ?>
             <main>

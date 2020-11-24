@@ -11,7 +11,7 @@
     <head>
         <title>Admin</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/main_stylesheet.css">
+        <link rel="stylesheet" href="css/admin_page_stylesheet.css">
     </head>
 
     <body>
@@ -59,7 +59,7 @@
             </nav>
 
         <main>
-            <table border=1 align="center">
+            <table id="users">
                 <tr>
                     <th>User ID</th>
                     <th>First Name</th>
@@ -82,7 +82,7 @@
                     </tr>
                         <?php endforeach;?>
                 </tr>
-            </table>
+            </table><br>
             <a href="admin_page.php"><button>Back</button></a><br><br><br>
         </main>
 
