@@ -14,3 +14,4 @@ I mainly worked on PHP files and making sure that our front end can communicate 
 **Caroline Umila (811337214)**
 
 **Farrel Wong (811003031)**
+I worked on parts of the database and SQL queries as well as certain PHP pages in the site such as the Shopping Cart and Checkout functionality.
