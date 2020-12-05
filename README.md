@@ -10,6 +10,7 @@ In order to run, make sure you have Apache and a MySQL server. For this website,
 I mainly worked on PHP files and making sure that our front end can communicate with the backend, as well as minor details and useability of the website. I fixed a problem if there was one and if I knew how to solve it.
 
 **Tommy Lee (811837828)**
+Worked on parts of the database design, worked on PHP files and making sure the database were commiting or fetching data properly (specifically for the admin and search results page), and worked on a little bit of the front end for a style consistency throughout the project.
 
 **Caroline Umila (811337214)**
 I worked on the main design of the html pages and most of the CSS for the project. I also worked on the PHP and functionality for various pages including the edit profile and sign in pages.
